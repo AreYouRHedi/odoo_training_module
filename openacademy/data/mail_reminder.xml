@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="mail_template_reminder" model="mail.template">
+            <field name="name">Reminder</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="subject">Reminder </field>
+            <field name="email_from">${object.email | safe}</field>
+            <field name="email_to">${object.email | safe}</field>
+            <field name="body_html" type="html">
+                <p> Hello, ${ctx.get('partner')}</p>
+                <p> Don't forget your session : ${ctx.get('date')} </p>
+
+
+            </field>
+        </record>
+</odoo>

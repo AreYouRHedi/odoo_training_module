@@ -1,0 +1,23 @@
+<odoo>
+    <template id="openacademy.mysessions">
+         <t t-call="website.layout">
+            <t t-set="title">Open academy</t>
+             <div class="oe_structure">
+                <div class="container">
+                    <t t-foreach="registrations" t-as="registration">
+                        <p>
+                            <t t-esc="registration.session_id.name"/>
+                            <t t-if="registration.validated">
+                                  status: Validated
+                            </t>
+                            <t t-else="">
+                                  status: Not validated
+                            </t>
+                        </p>
+                    </t>
+
+                </div>
+             </div>
+        </t>
+    </template>
+</odoo>

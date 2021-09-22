@@ -1,0 +1,25 @@
+<odoo>
+
+     <record model="ir.ui.view" id="registration_tree_view">
+        <field name="name">registration.tree</field>
+        <field name="model">openacademy.registration</field>
+        <field name="arch" type="xml">
+            <tree string="Session Tree">
+                <field name="validated"/>
+                <field name="partner_id"/>
+                <field name="session_id"/>
+
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="registration_list_action">
+        <field name="name">Registrations</field>
+        <field name="res_model">openacademy.registration</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="registration_menu" name="Registrations"
+              parent="openacademy.openacademy_menu"
+              action="registration_list_action"/>
+</odoo>

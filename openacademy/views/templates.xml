@@ -1,0 +1,38 @@
+<odoo>
+    <template id="index">
+        <t t-call="website.layout">
+            <t t-set="title">Open academy</t>
+            <div class="oe_structure">
+                <div class="container">
+                    <t t-foreach="sessions" t-as="session">
+                        <p><a t-attf-href="/openacademy/{{ slug(session) }}">
+                            <t t-esc="session.name"/></a>
+                        </p>
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
+    <template id="get_session">
+        <t t-call="website.layout">
+            <t t-set="title">Open academy</t>
+             <div class="oe_structure">
+                <div class="container">
+                        <h3 t-field="session.name"> </h3>
+                        <div t-field="session.course_id"> </div>
+                </div>
+             </div>
+            <div class="oe_structure">
+                <div class="container">
+                    <div>
+                        <form action="/openacademy/subscription">
+
+                            <input name="session" t-att-value="session.id" type="hidden"/>
+                            <button type="submit"> Subscribe </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

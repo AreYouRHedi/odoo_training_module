@@ -1,0 +1,23 @@
+<odoo>
+    <template id="openacademy.register_validated">
+         <t t-call="website.layout">
+            <h1> Registration accepted</h1>
+            <p> look your mail box to see the confirmation of your participation </p>
+         </t>
+
+    </template>
+    <template id="openacademy.register_already_validated">
+         <t t-call="website.layout">
+            <h1> Registration already sent </h1>
+            <div t-if="registration.validated">
+                <p> You're already an attendee </p>
+            </div>
+            <div t-else="">
+                <p> Wait for a validation </p>
+
+            </div>
+
+         </t>
+
+    </template>
+</odoo>
