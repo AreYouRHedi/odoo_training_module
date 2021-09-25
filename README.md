@@ -8,3 +8,6 @@ This is a module about courses teaching from the odoo tutorial that I made durin
 Link : https://www.odoo.com/documentation/14.0/fr/developer/howtos/rdtraining.html
 
 Warning : Odoo has made changes in his tutorial and it can have some differences with mine.
+
+
+To use this module, you need to install Odoo => https://www.odoo.com/documentation/14.0/fr/administration/install/install.html
